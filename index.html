@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Physiotherapie Müller – Göttingen</title>
 
   <style>
@@ -90,84 +90,81 @@
 </head>
 
 <body>
+  <header>
+    <h1>Physiotherapie Müller</h1>
+    <p>Ihre Praxis für moderne Physiotherapie in Göttingen</p>
+  </header>
 
-<header>
-  <h1>Physiotherapie Müller</h1>
-  <p>Ihre Praxis für moderne Physiotherapie in Göttingen</p>
-</header>
+  <div class="container">
+    <h2>Unsere Leistungen</h2>
+    <div class="services">
+      <div class="card">Krankengymnastik</div>
+      <div class="card">Manuelle Therapie</div>
+      <div class="card">Lymphdrainage</div>
+      <div class="card">Sportphysiotherapie</div>
+      <div class="card">Massage</div>
+      <div class="card">Rückenschule</div>
+    </div>
 
-<div class="container">
+    <h2>Öffnungszeiten</h2>
+    <div class="card">
+      Montag–Donnerstag: 08:00 – 18:00 Uhr<br>
+      Freitag: 08:00 – 16:00 Uhr<br>
+      Samstag: nach Vereinbarung<br>
+      Sonntag: geschlossen
+    </div>
 
-  <h2>Unsere Leistungen</h2>
-  <div class="services">
-    <div class="card">Krankengymnastik</div>
-    <div class="card">Manuelle Therapie</div>
-    <div class="card">Lymphdrainage</div>
-    <div class="card">Sportphysiotherapie</div>
-    <div class="card">Massage</div>
-    <div class="card">Rückenschule</div>
+    <h2>FAQ</h2>
+
+    <div class="card faq-item">
+      <div class="faq-question">Brauche ich ein Rezept?</div>
+      <div>Für gesetzlich Versicherte ist ein Rezept notwendig.</div>
+    </div>
+
+    <div class="card faq-item">
+      <div class="faq-question">Wie vereinbare ich einen Termin?</div>
+      <div>Telefonisch oder direkt über den Chat.</div>
+    </div>
+
+    <div class="card faq-item">
+      <div class="faq-question">Gibt es Parkplätze?</div>
+      <div>Ja, direkt vor der Praxis.</div>
+    </div>
+
+    <h2>Kontakt</h2>
+    <div class="contact">
+      📞 0551 123456<br>
+      📍 Musterstraße 12, Göttingen<br>
+      ✉ info@physio-mueller.de
+    </div>
+
+    <div class="cta">
+      Jetzt Termin anfragen – auch direkt über den Chat!
+    </div>
   </div>
 
-  <h2>Öffnungszeiten</h2>
-  <div class="card">
-    Montag–Donnerstag: 08:00 – 18:00 Uhr<br>
-    Freitag: 08:00 – 16:00 Uhr<br>
-    Samstag: nach Vereinbarung<br>
-    Sonntag: geschlossen
-  </div>
+  <footer>
+    © 2026 Physiotherapie Müller
+  </footer>
 
-  <h2>FAQ</h2>
+  <!-- Botpress -->
+  <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
+  <script src="https://files.bpcontent.cloud/2026/03/07/13/20260307131524-D6JUR8TU.js" defer></script>
 
-  <div class="card faq-item">
-    <div class="faq-question">Brauche ich ein Rezept?</div>
-    <div>Für gesetzlich Versicherte ist ein Rezept notwendig.</div>
-  </div>
+  <!-- Auto open -->
+  <script>
+    window.addEventListener("load", function () {
+      const tryOpen = setInterval(function () {
+        const api =
+          window.botpressWebChat ||
+          window.botpress;
 
-  <div class="card faq-item">
-    <div class="faq-question">Wie vereinbare ich einen Termin?</div>
-    <div>Telefonisch oder direkt über den Chat.</div>
-  </div>
-
-  <div class="card faq-item">
-    <div class="faq-question">Gibt es Parkplätze?</div>
-    <div>Ja, direkt vor der Praxis.</div>
-  </div>
-
-  <h2>Kontakt</h2>
-  <div class="contact">
-    📞 0551 123456<br>
-    📍 Musterstraße 12, Göttingen<br>
-    ✉ info@physio-mueller.de
-  </div>
-
-  <div class="cta">
-    Jetzt Termin anfragen – auch direkt über den Chat!
-  </div>
-
-</div>
-
-<footer>
-  © 2026 Physiotherapie Müller
-</footer>
-
-<!-- BOTPRESS STANDARD -->
-<script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
-<script src="https://files.bpcontent.cloud/2026/03/07/13/20260307131524-D6JUR8TU.js" defer></script>
-
-<!-- AUTO OPEN SCRIPT -->
-<script>
-  window.addEventListener("load", function () {
-    setTimeout(function () {
-      const interval = setInterval(() => {
-        const iframe = document.querySelector("iframe");
-        if (iframe) {
-          iframe.style.display = "block";
-          clearInterval(interval);
+        if (api && typeof api.sendEvent === "function") {
+          api.sendEvent({ type: "show" });
+          clearInterval(tryOpen);
         }
-      }, 500);
-    }, 1500);
-  });
-</script>
-
+      }, 400);
+    });
+  </script>
 </body>
 </html>
