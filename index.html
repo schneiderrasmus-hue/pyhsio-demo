@@ -147,24 +147,34 @@
     © 2026 Physiotherapie Müller
   </footer>
 
-  <!-- Botpress -->
-  <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
-  <script src="https://files.bpcontent.cloud/2026/03/07/13/20260307131524-D6JUR8TU.js" defer></script>
+ <!-- BOTPRESS -->
+<script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
+<script>
+  window.addEventListener("load", async function () {
+    const clientId = "36c5b696-4270-4542-ac50-f38cd4e9ebe3";
 
-  <!-- Auto open -->
-  <script>
-    window.addEventListener("load", function () {
-      const tryOpen = setInterval(function () {
-        const api =
-          window.botpressWebChat ||
-          window.botpress;
+    const waitForBp = setInterval(async () => {
+      const bp = window.botpress;
 
-        if (api && typeof api.sendEvent === "function") {
-          api.sendEvent({ type: "show" });
-          clearInterval(tryOpen);
+      if (!bp || typeof bp.init !== "function") return;
+
+      clearInterval(waitForBp);
+
+      await bp.init({
+        clientId: clientId,
+        configuration: {
+          botName: "Praxis Assistent",
+          composerPlaceholder: "Nachricht eingeben..."
         }
-      }, 400);
-    });
-  </script>
+      });
+
+      setTimeout(() => {
+        if (typeof bp.open === "function") {
+          bp.open();
+        }
+      }, 1200);
+    }, 300);
+  });
+</script>
 </body>
 </html>
