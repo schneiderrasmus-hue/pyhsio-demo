@@ -150,32 +150,11 @@
   © 2026 Physiotherapie Müller
 </footer>
 
-<!-- BOTPRESS AUTO OPEN SCRIPT -->
-<script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
-
-<script>
-  window.botpressWebChat.init({
-    botId: "DEINE_BOT_ID_HIER",  // <-- HIER ERSETZEN
-    configuration: {
-      botName: "Praxis Assistent",
-      composerPlaceholder: "Nachricht eingeben...",
-    }
-  });
-
-  window.addEventListener("load", function () {
-    setTimeout(function () {
-      window.botpressWebChat.sendEvent({ type: "show" });
-    }, 1500);
-  });
-</script>
-
-</body>
-</html>
-
-
+<!-- BOTPRESS STANDARD -->
 <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
 <script src="https://files.bpcontent.cloud/2026/03/07/13/20260307131524-D6JUR8TU.js" defer></script>
 
+<!-- AUTO OPEN SCRIPT -->
 <script>
   window.addEventListener("load", function () {
     setTimeout(function () {
