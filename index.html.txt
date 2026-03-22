@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Physiotherapie Müller</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.5;
+      color: #222;
+    }
+    header {
+      background: #f2f7fb;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 24px 20px;
+    }
+    h1, h2 {
+      margin-bottom: 12px;
+    }
+    .card {
+      background: #f7f7f7;
+      border-radius: 12px;
+      padding: 16px;
+      margin: 12px 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Physiotherapie Müller</h1>
+    <p>Ihre Praxis für Rücken, Schulter und Sportphysiotherapie in Göttingen</p>
+  </header>
+
+  <section>
+    <h2>Unsere Leistungen</h2>
+    <div class="card">Krankengymnastik</div>
+    <div class="card">Manuelle Therapie</div>
+    <div class="card">Lymphdrainage</div>
+    <div class="card">Sportphysiotherapie</div>
+  </section>
+
+  <section>
+    <h2>Öffnungszeiten</h2>
+    <p>Montag–Freitag: 08:00–18:00 Uhr</p>
+  </section>
+
+  <section>
+    <h2>Kontakt</h2>
+    <p>Telefon: 0551 123456</p>
+    <p>E-Mail: info@physio-mueller-demo.de</p>
+    <p>Adresse: Beispielstraße 12, 37073 Göttingen</p>
+  </section>
+
+  <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
+  <script src="https://files.bpcontent.cloud/2026/03/07/13/20260307131524-D6JUR8TU.js" defer></script>
+</body>
+</html>
