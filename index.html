@@ -1,65 +1,184 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Physiotherapie Müller</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Physiotherapie Müller – Göttingen</title>
+
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      line-height: 1.5;
+      font-family: Arial, sans-serif;
       color: #222;
+      background: #f9fbfc;
     }
+
     header {
-      background: #f2f7fb;
-      padding: 40px 20px;
+      background: #1e88e5;
+      color: white;
+      padding: 60px 20px;
       text-align: center;
     }
-    section {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 24px 20px;
+
+    header h1 {
+      margin: 0;
+      font-size: 36px;
     }
-    h1, h2 {
-      margin-bottom: 12px;
+
+    header p {
+      margin-top: 10px;
+      font-size: 18px;
     }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h2 {
+      margin-bottom: 15px;
+      color: #1e88e5;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+    }
+
     .card {
-      background: #f7f7f7;
-      border-radius: 12px;
-      padding: 16px;
-      margin: 12px 0;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      margin-bottom: 10px;
+    }
+
+    .faq-item {
+      margin-bottom: 15px;
+    }
+
+    .faq-question {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .contact {
+      background: #eef4f8;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #777;
+    }
+
+    .cta {
+      background: #43a047;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      border-radius: 8px;
+      margin-top: 20px;
+      font-weight: bold;
     }
   </style>
 </head>
-<body>
-  <header>
-    <h1>Physiotherapie Müller</h1>
-    <p>Ihre Praxis für Rücken, Schulter und Sportphysiotherapie in Göttingen</p>
-  </header>
 
-  <section>
-    <h2>Unsere Leistungen</h2>
+<body>
+
+<header>
+  <h1>Physiotherapie Müller</h1>
+  <p>Ihre Praxis für moderne Physiotherapie in Göttingen</p>
+</header>
+
+<div class="container">
+
+  <h2>Unsere Leistungen</h2>
+  <div class="services">
     <div class="card">Krankengymnastik</div>
     <div class="card">Manuelle Therapie</div>
     <div class="card">Lymphdrainage</div>
     <div class="card">Sportphysiotherapie</div>
-  </section>
+    <div class="card">Massage</div>
+    <div class="card">Rückenschule</div>
+  </div>
 
-  <section>
-    <h2>Öffnungszeiten</h2>
-    <p>Montag–Freitag: 08:00–18:00 Uhr</p>
-  </section>
+  <h2>Öffnungszeiten</h2>
+  <div class="card">
+    Montag: 08:00 – 18:00 Uhr<br>
+    Dienstag: 08:00 – 18:00 Uhr<br>
+    Mittwoch: 08:00 – 18:00 Uhr<br>
+    Donnerstag: 08:00 – 18:00 Uhr<br>
+    Freitag: 08:00 – 16:00 Uhr<br>
+    Samstag: nach Vereinbarung<br>
+    Sonntag: geschlossen
+  </div>
 
-  <section>
-    <h2>Kontakt</h2>
-    <p>Telefon: 0551 123456</p>
-    <p>E-Mail: info@physio-mueller-demo.de</p>
-    <p>Adresse: Beispielstraße 12, 37073 Göttingen</p>
-  </section>
+  <h2>Warum wir?</h2>
+  <div class="card">
+    ✔ Individuelle Therapiepläne<br>
+    ✔ Moderne Behandlungsmethoden<br>
+    ✔ Zentrale Lage in Göttingen<br>
+    ✔ Kurze Wartezeiten
+  </div>
 
-  <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
-  <script src="https://files.bpcontent.cloud/2026/03/07/13/20260307131524-D6JUR8TU.js" defer></script>
+  <h2>Häufige Fragen (FAQ)</h2>
+
+  <div class="card faq-item">
+    <div class="faq-question">Brauche ich ein Rezept für die Behandlung?</div>
+    <div>Für gesetzlich Versicherte ist in der Regel ein ärztliches Rezept erforderlich. Privatleistungen sind auch ohne Rezept möglich.</div>
+  </div>
+
+  <div class="card faq-item">
+    <div class="faq-question">Wie vereinbare ich einen Termin?</div>
+    <div>Sie können uns telefonisch kontaktieren oder direkt über den Chat eine Anfrage senden. Wir melden uns schnellstmöglich bei Ihnen.</div>
+  </div>
+
+  <div class="card faq-item">
+    <div class="faq-question">Wie lange dauert eine Behandlung?</div>
+    <div>Eine Behandlung dauert in der Regel zwischen 20 und 30 Minuten, je nach Therapieform.</div>
+  </div>
+
+  <div class="card faq-item">
+    <div class="faq-question">Werden auch Privatpatienten behandelt?</div>
+    <div>Ja, wir behandeln sowohl gesetzlich als auch privat versicherte Patienten.</div>
+  </div>
+
+  <div class="card faq-item">
+    <div class="faq-question">Gibt es Parkmöglichkeiten?</div>
+    <div>Ja, es stehen Parkplätze direkt vor der Praxis sowie in der Umgebung zur Verfügung.</div>
+  </div>
+
+  <div class="card faq-item">
+    <div class="faq-question">Was kostet eine Behandlung?</div>
+    <div>Die Kosten richten sich nach der Art der Behandlung und Ihrem Versicherungsstatus. Gerne informieren wir Sie individuell.</div>
+  </div>
+
+  <h2>Kontakt</h2>
+  <div class="contact">
+    📞 0551 123456<br>
+    📍 Musterstraße 12, Göttingen<br>
+    ✉ info@physio-mueller.de
+  </div>
+
+  <div class="cta">
+    Jetzt Termin anfragen – auch direkt über den Chat!
+  </div>
+
+</div>
+
+<footer>
+  © 2026 Physiotherapie Müller
+</footer>
+
+<!-- BOTPRESS -->
+<script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2026/03/07/13/20260307131524-D6JUR8TU.js" defer></script>
+
 </body>
 </html>
